@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【半導體真空閥門維修與零件庫】聯銘有限公司 & 欣科國際｜專業真空閥門翻修與零組件開發</title>
+    <meta name="description" content="聯銘有限公司與欣科國際有限公司專精半導體真空閥門維修、AMAT、VAT、MKS、Tylan Butterfly Throttle Valve 壓控閥、閘板閥與原廠零件編號大修服務。">
+    <meta name="keywords" content="聯銘有限公司, 欣科國際, Lamitech, Butterfly Throttle Valve, AMAT throttle valve, VAT valve, MKS 253B, 真空閥門維修">
+
+    <!-- Tailwind CSS 現代化排版框架 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+    
+    <!-- Schema.org 結構化數據 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "聯銘有限公司 / 欣科國際有限公司",
+      "url": "http://www.lamitech.com.tw",
+      "telephone": "+886-3-5370025",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "中華路六段718號",
+        "addressLocality": "香山區",
+        "addressRegion": "新竹市",
+        "postalCode": "30095",
+        "addressCountry": "TW"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
+
+    <!-- 頂部導覽列 -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-6 py-4 shadow-xs">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchPage('home')">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white font-black flex items-center justify-center text-base shadow-sm">
+                    L
+                </div>
+                <div>
+                    <h1 class="font-bold text-sm text-slate-900 leading-tight">聯銘有限公司 & 欣科國際 <span class="text-xs text-slate-500 font-normal">Lamitech & Prima</span></h1>
+                    <p class="text-[11px] text-blue-600 font-medium">Best Vacuum Valve Service Provider for Semiconductor</p>
+                </div>
+            </div>
+            
+            <!-- 多頁切換導覽按鈕 -->
+            <nav class="hidden lg:flex items-center space-x-6 text-xs font-bold text-slate-600">
+                <button onclick="switchPage('home')" id="nav_home" class="hover:text-blue-600 transition text-blue-600">首頁 Home</button>
+                <button onclick="switchPage('services')" id="nav_services" class="hover:text-blue-600 transition">服務項目 Services</button>
+                <button onclick="switchPage('products')" id="nav_products" class="hover:text-blue-600 transition">產品介紹 Product</button>
+                <button onclick="switchPage('about')" id="nav_about" class="hover:text-blue-600 transition">關於我們 About</button>
+                <button onclick="switchPage('centers')" id="nav_centers" class="hover:text-blue-600 transition">服務據點 Service Center</button>
+                <button onclick="switchPage('contact')" id="nav_contact" class="hover:text-blue-600 transition">聯絡我們 Contact</button>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:035370025" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> 03-5370025
+                </a>
+                <button onclick="checkAdminAccess()" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition shadow-sm flex items-center gap-1.5" title="管理者登入">
+                    <i class="fa-solid fa-lock text-[10px]"></i> 後台
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主體內容容器 (多頁動態切換) -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6">
+
+        <!-- ================= PAGE: HOME 首頁 ================= -->
+        <div id="page_home" class="page-content space-y-6">
+            <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-xs relative overflow-hidden flex flex-col md:flex-row justify-between items-center">
+                <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-blue-50 rounded-full blur-3xl"></div>
+                <div class="max-w-2xl z-10 mb-8 md:mb-0">
+                    <span class="bg-blue-50 text-blue-600 text-[11px] font-bold tracking-wider px-3.5 py-1.5 rounded-full uppercase inline-block mb-4">
+                        Semiconductor Vacuum Expert
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight">
+                        Best Vacuum Valve <br><span class="text-blue-600">Service Provider.</span>
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                        聯銘有限公司以滿足客戶在電子科技產業製造方面之材料、服務需求為主要目標，提供完整性服務設計、品質管理與成本考量，協同上下游共創國際競爭優勢。
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="switchPage('services')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-5 py-3 rounded-xl transition shadow-sm">瀏覽服務項目</button>
+                        <button onclick="switchPage('products')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition shadow-sm">查看產品介紹與資料庫</button>
+                    </div>
+                </div>
+                <div class="w-full md:w-80 bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-xs z-10 text-xs space-y-3">
+                    <h4 class="font-bold text-slate-900 border-b border-slate-200 pb-2 mb-2">快速分頁導覽</h4>
+                    <button onclick="switchPage('services')" class="block text-left text-slate-600 hover:text-blue-600 transition">服務項目與維修範圍</button>
+                    <button onclick="switchPage('products')" class="block text-left text-slate-600 hover:text-blue-600 transition">產品介紹與零件資料庫</button>
+                    <button onclick="switchPage('about')" class="block text-left text-slate-600 hover:text-blue-600 transition">關於我們與公司簡介</button>
+                    <button onclick="switchPage('centers')" class="block text-left text-slate-600 hover:text-blue-600 transition">全球服務據點</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: SERVICES 服務項目 ================= -->
+        <div id="page_services" class="page-content hidden space-y-6">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs">
+                <span class="bg-blue-50 text-blue-600 text-[11px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-2">Services</span>
+                <h3 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase mb-4">服務項目 SERVICES</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                    聯銘有限公司以滿足客戶在電子科技產業製造方面之材料、服務需求為主要目標，並提供完整性的服務設計、品質管理與成本考量，協同上下游及週邊產業共同創造國際競爭優勢。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-700">
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <strong class="text-slate-900 block font-bold mb-1"><i class="fa-solid fa-gauge text-blue-600 mr-1"></i> 真空壓力控制閥維修 / 翻修 / 保養服務</strong>
+                        AMAT throttle valve (CVD, Etching eMax, DXZ, WCVD, WXZ), APC throttle valve, Tylan / Millipore throttle valve, VAT throttle valve（61234-KAGQ）。
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <strong class="text-slate-900 block font-bold mb-1"><i class="fa-solid fa-code-merge text-blue-600 mr-1"></i> 真空管路閥門與隔離閥</strong>
+                        AMAT isolation valve, MKS isolation valve, VAT isolation valve, NC/MDC isolation valve, VAT/HVA/AKT/SMC gate valve, V-TEX APC valve。
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <strong class="text-slate-900 block font-bold mb-1"><i class="fa-solid fa-cube text-blue-600 mr-1"></i> 製程腔體閥門 (Slit Valve)</strong>
+                        AMAT slit valve, NVL Novellus, SMC L-motion, VTEX, VAT, AKT, ATS, V-TEX MV151 valve。
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <strong class="text-slate-900 block font-bold mb-1"><i class="fa-solid fa-arrows-spin text-blue-600 mr-1"></i> 波紋管維修與新品製造</strong>
+                        Vacuum Bellow, Vacuum piping 專用波紋管維修與新品製造。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: PRODUCTS 產品介紹 (含即時搜尋六大類零件資料庫) ================= -->
+        <div id="page_products" class="page-content hidden grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div class="lg:col-span-4 space-y-6">
+                <!-- 產品六大分類導覽 -->
+                <div class="bg-white rounded-3xl p-4 border border-slate-200 shadow-xs">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-3 mb-3">零件與型號分類快速導覽</h3>
+                    <div class="space-y-1">
+                        <button onclick="filterGroup('all')" id="btn_all" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between bg-blue-50 text-blue-600 font-bold shadow-xs">
+                            <span>全部零件與型號總覽 <span class="block text-[10px] text-slate-400 font-normal">Complete Inventory</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('butterfly')" id="btn_butterfly" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Butterfly Throttle Valve <span class="block text-[10px] text-slate-400 font-normal">真空蝴蝶閥</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('gate')" id="btn_gate" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Vacuum Gate Valve <span class="block text-[10px] text-slate-400 font-normal">真空開關閥</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('door')" id="btn_door" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Vacuum Door Valve <span class="block text-[10px] text-slate-400 font-normal">真空腔體閥門</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('pendulum')" id="btn_pendulum" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Pendulum Valve <span class="block text-[10px] text-slate-400 font-normal">鐘擺閥</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('isolation')" id="btn_isolation" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Vacuum Isolation Valve <span class="block text-[10px] text-slate-400 font-normal">真空管開關閥</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('actuator')" id="btn_actuator" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Lift Actuator <span class="block text-[10px] text-slate-400 font-normal">升降驅動機構 (汽缸 & 馬達)</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 space-y-6">
+                <!-- 產品介紹大標題與摘要 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs">
+                    <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Product Catalog</span>
+                    <h3 class="text-xl font-black text-slate-900 mt-1">產品介紹 Product</h3>
+                    <p class="text-xs text-slate-500 mt-1">服務 · 品質 · 成本 · 效率｜請點選左側六大類別或使用下方搜尋查詢詳細型號與 P/N。</p>
+                </div>
+
+                <!-- 搜尋與資料庫清單 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 mb-6 gap-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">真空閥門與零件型號清單</h4>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="searchInput" placeholder="輸入型號或 P/N 搜尋..." oninput="searchDatabase()" class="bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-xs text-slate-800 focus:outline-none focus:border-blue-600 w-full sm:w-60">
+                        </div>
+                    </div>
+                    <div id="databaseGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[550px] overflow-y-auto pr-2 custom-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: ADMIN 後台管理面板 ================= -->
+        <div id="page_admin" class="page-content hidden space-y-6 max-w-5xl mx-auto">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-4 gap-3">
+                    <div>
+                        <span class="bg-slate-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Admin Panel</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-1">產品後台管理系統</h3>
+                        <p class="text-xs text-slate-500">在此新增、修改或刪除產品資料（含名稱、型號、圖片與連結），變更將立即儲存。</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="openProductModal()" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-sm">
+                            <i class="fa-solid fa-plus mr-1"></i> 新增產品
+                        </button>
+                        <button onclick="switchPage('products')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2.5 rounded-xl transition">
+                            返回前台
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-50 text-slate-500 uppercase border-b border-slate-200">
+                            <tr>
+                                <th class="p-3">圖片</th>
+                                <th class="p-3">產品名稱</th>
+                                <th class="p-3">零件編號 (P/N)</th>
+                                <th class="p-3">類別</th>
+                                <th class="p-3 text-right">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminTableBody" class="divide-y divide-slate-100"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: ABOUT 關於我們 ================= -->
+        <div id="page_about" class="page-content hidden space-y-6">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-8">
+                <div>
+                    <span class="bg-blue-50 text-blue-600 text-[11px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-2">About Us</span>
+                    <h3 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase mb-4">關於我們 ABOUT</h3>
+                    <div class="text-xs sm:text-sm text-slate-600 space-y-2 mb-6">
+                        <p><strong>公司地址：</strong>新竹市 30095 香山區中華路六段 718 號</p>
+                        <p><strong>TEL :</strong> +886-3-5370025 ｜ <strong>FAX :</strong> +886-3-5370189</p>
+                        <p><strong>Email :</strong> service@lamitech.com.tw</p>
+                    </div>
+                </div>
+
+                <!-- 欣科國際有限公司 簡介 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-4">
+                    <h4 class="font-bold text-base text-slate-900 border-b border-slate-200 pb-2">欣科國際有限公司 簡介</h4>
+                    <p>
+                        欣科國際有限公司 創立於2002年，以服務半導體、光電業設備零件供應與真空閥門維修為主，並積極開創新科技商品與提高客戶服務為主要目標，以滿足客戶全方位的服務需求。
+                    </p>
+                    <div>
+                        <strong class="text-slate-900 block mb-1 font-bold">經營方針：</strong>
+                        品質、服務、成本、效率
+                    </div>
+                    <div>
+                        <strong class="text-slate-900 block mb-1 font-bold">主要營業內容：</strong>
+                        <ol class="list-decimal list-inside space-y-1 pl-1">
+                            <li>半導體、光電業製程設備真空閥門維修</li>
+                            <li>金屬零件、工業塑膠 加工製造</li>
+                            <li>半導體、光電業 RF & RPS generator 維修保養</li>
+                            <li>相關半導體零件進口與銷售</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 歷史沿革 Timeline -->
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 mb-4">公司發展歷史沿革 Timeline</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">1996：</strong>公司成立 (新竹/竹北)，銷售服務部門成立。</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">1997：</strong>成立半導體真空閥件維修服務部門。</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">1999：</strong>銷售半導體零件與材料。</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2001：</strong>提供自動控制設計與服務。</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2003：</strong>成立光電事業部門。</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2004：</strong>中國 (蘇州) 維修中心成立。</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2006：</strong>搬遷新公司地址 (新竹/香山)。</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2007-2010：</strong>閥件維修進入國際市場並全面電腦化。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: CENTERS 服務據點 ================= -->
+        <div id="page_centers" class="page-content hidden space-y-6">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs">
+                <span class="bg-blue-50 text-blue-600 text-[11px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-2">Service Center</span>
+                <h3 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase mb-6">全球服務據點 WORLD WIDE SERVICE CENTER</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-xs">
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <span class="bg-slate-900 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase inline-block mb-2">TAIWAN</span>
+                        <h4 class="font-bold text-slate-900 mb-1">聯銘有限公司</h4>
+                        <a href="mailto:service@lamitech.com.tw" class="text-blue-600 font-medium hover:underline">service@lamitech.com.tw</a>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <span class="bg-slate-900 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase inline-block mb-2">TAIWAN</span>
+                        <h4 class="font-bold text-slate-900 mb-1">欣科國際有限公司</h4>
+                        <a href="mailto:service@prima-biz.com.tw" class="text-blue-600 font-medium hover:underline">service@prima-biz.com.tw</a>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <span class="bg-slate-900 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase inline-block mb-2">CHINA</span>
+                        <h4 class="font-bold text-slate-900 mb-1">宏圖(蘇州工業園區)半導體技術服務有限公司</h4>
+                        <a href="mailto:bill_chen@lamitech.com.tw" class="text-blue-600 font-medium hover:underline">bill_chen@lamitech.com.tw</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: CONTACT 聯絡我們 ================= -->
+        <div id="page_contact" class="page-content hidden space-y-6">
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl max-w-3xl mx-auto">
+                <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-2">Contact Us</span>
+                <h3 class="text-2xl font-black uppercase mb-4">聯絡我們 ｜ 聯銘有限公司 & 欣科國際</h3>
+                <div class="text-xs text-slate-300 space-y-2 mb-6">
+                    <p><strong>地址：</strong>新竹市 30095 香山區中華路六段 718 號</p>
+                    <p><strong>TEL :</strong> +886-3-5370025 ｜ <strong>FAX :</strong> +886-3-5370189</p>
+                    <p><strong>Email :</strong> service@lamitech.com.tw / service@prima-biz.com.tw</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('感謝您的填寫！表單已送出，工程團隊將盡速與您聯繫。');" class="space-y-3 text-xs">
+                    <div>
+                        <input type="text" required placeholder="您的姓名 / 公司名稱" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <input type="tel" required placeholder="聯絡電話 / 分機" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <textarea rows="3" required placeholder="請輸入您的維修或設備需求..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition shadow-md">
+                        送出諮詢訊息 <i class="fa-solid fa-paper-plane ml-1"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 後台產品 新增/編輯 Modal 視窗 -->
+    <div id="productModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl space-y-4">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                <h3 id="modalTitle" class="font-black text-slate-900 text-sm">新增產品</h3>
+                <button onclick="closeProductModal()" class="text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="handleProductSubmit(event)" class="space-y-3 text-xs">
+                <input type="hidden" id="editIndex" value="-1">
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品分類</label>
+                    <select id="prodGroup" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                        <option value="butterfly">Butterfly Throttle Valve (真空蝴蝶閥)</option>
+                        <option value="gate">Vacuum Gate Valve (真空開關閥)</option>
+                        <option value="door">Vacuum Door Valve (真空腔體閥門)</option>
+                        <option value="pendulum">Pendulum Valve (鐘擺閥)</option>
+                        <option value="isolation">Vacuum Isolation Valve (真空管開關閥)</option>
+                        <option value="actuator">Lift Actuator (升降驅動機構)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品名稱</label>
+                    <input type="text" id="prodName" required placeholder="例如：AMAT eMAX 300mm Throttle Valve" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">零件編號 (P/N)</label>
+                    <input type="text" id="prodPn" required placeholder="例如：0010-15321-004" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品描述</label>
+                    <textarea id="prodDesc" rows="2" required placeholder="簡述維修或規格內容..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600"></textarea>
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品圖片網址 (Image URL)</label>
+                    <input type="text" id="prodImg" placeholder="https://..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">詳細連結網址 (Link URL)</label>
+                    <input type="text" id="prodLink" placeholder="https://www.lamitech.com.tw" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeProductModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-4 py-2.5 rounded-xl transition">取消</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl transition shadow-sm">儲存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="bg-white border-t border-slate-200 text-slate-500 py-6 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p>Copyright © www.lamitech.com.tw 2026 聯銘有限公司 & 欣科國際有限公司 保留所有權利</p>
+            <button onclick="switchPage('home')" class="font-bold text-slate-700 hover:text-blue-600"><i class="fa-solid fa-arrow-up mr-1"></i> 返回首頁</button>
+        </div>
+    </footer>
+
+    <script>
+        // 多頁切換邏輯
+        function switchPage(pageId) {
+            const pages = ['home', 'services', 'products', 'admin', 'about', 'centers', 'contact'];
+            
+            pages.forEach(p => {
+                const el = document.getElementById(`page_${p}`);
+                const nav = document.getElementById(`nav_${p}`);
+                if (el) {
+                    if (p === pageId) {
+                        el.classList.remove('hidden');
+                    } else {
+                        el.classList.add('hidden');
+                    }
+                }
+                if (nav) {
+                    if (p === pageId) {
+                        nav.classList.add('text-blue-600');
+                    } else {
+                        nav.classList.remove('text-blue-600');
+                    }
+                }
+            });
+
+            if (pageId === 'admin') {
+                renderAdminTable();
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 後台密碼驗證進入
+        function checkAdminAccess() {
+            const pwd = prompt("請輸入管理者密碼：\n(預設密碼為: admin123)");
+            if (pwd === "admin123") {
+                switchPage('admin');
+            } else if (pwd !== null) {
+                alert("密碼錯誤！");
+            }
+        }
+
+        // 預設產品資料庫 (從 localStorage 讀取或初始化)
+        let partDatabase = JSON.parse(localStorage.getItem('lamitech_products')) || [
+            { id: 1, name: "AMAT eMAX 300mm Throttle Valve", pn: "AMAT PN : 0010-15321-004", group: "butterfly", desc: "Centura eMAX Etch Throttle Valve 專業維修與大修", img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" },
+            { id: 2, name: "12” MCVD Throttle Valve", pn: "0010-17151", group: "butterfly", desc: "高效能真空壓控閥翻修", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" },
+            { id: 3, name: "P5000 Etcher Butterfly Valve", pn: "0010-09119", group: "butterfly", desc: "P5000 蝕刻製程專用蝶閥", img: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" },
+            { id: 4, name: "AMAT Isolation Gate Valve", pn: "AMAT Gate Valve P/N", group: "gate", desc: "AMAT 系統專用真空隔離閘板閥", img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" },
+            { id: 5, name: "AMAT Slit Valve", pn: "0010-xxxx Slit Valve", group: "door", desc: "AMAT 傳送腔與製程腔體間之 Slit Valve 閥門", img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" },
+            { id: 6, name: "VAT Pendulum Throttle Valve", pn: "VAT Pendulum Series", group: "pendulum", desc: "高精度 VAT 鐘擺式壓控閥維修", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" },
+            { id: 7, name: "MKS Isolation Valve", pn: "MKS ISO Valve", group: "isolation", desc: "MKS 真空管路氣動隔離閥", img: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" },
+            { id: 8, name: "HDP 200mm Turbo Throttle Valve Motor", pn: "PK243A2A-SG36", group: "actuator", desc: "HDP 200mm 驅動步進馬達與機構", img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=400&auto=format&fit=crop&q=60", link: "https://www.lamitech.com.tw" }
+        ];
+
+        function saveToStorage() {
+            localStorage.setItem('lamitech_products', JSON.stringify(partDatabase));
+        }
+
+        let currentGroup = 'all';
+
+        // 渲染前台產品列表
+        function renderDatabase(items) {
+            const grid = document.getElementById('databaseGrid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            if (items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400 text-xs">沒有找到符合條件的型號或零件編號 🚀</div>`;
+                return;
+            }
+
+            items.forEach(item => {
+                grid.innerHTML += `
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex flex-col justify-between hover:border-blue-300 transition group">
+                        <div>
+                            <div class="h-36 w-full bg-slate-200 rounded-xl overflow-hidden mb-3 relative">
+                                <img src="${item.img || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60'}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60'">
+                                <span class="absolute top-2 left-2 bg-slate-900/80 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase font-mono">${item.group}</span>
+                            </div>
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="bg-blue-100/70 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded-md font-mono">${item.pn}</span>
+                            </div>
+                            <h4 class="font-bold text-xs text-slate-900 group-hover:text-blue-600 transition mb-1">${item.name}</h4>
+                            <p class="text-[11px] text-slate-500 leading-relaxed mb-3">${item.desc}</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="${item.link || '#'}" target="_blank" class="flex-1 bg-white hover:bg-slate-900 hover:text-white text-slate-700 text-center font-bold text-[11px] py-2 rounded-xl transition border border-slate-200 shadow-2xs">
+                                <i class="fa-solid fa-link mr-1"></i> 產品詳情
+                            </a>
+                            <a href="tel:035370025" class="bg-blue-600 hover:bg-blue-700 text-white text-center font-bold text-[11px] px-3 py-2 rounded-xl transition shadow-2xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // 分類過濾
+        function filterGroup(group) {
+            currentGroup = group;
+            ['all', 'butterfly', 'gate', 'door', 'pendulum', 'isolation', 'actuator'].forEach(g => {
+                const btn = document.getElementById(`btn_${g}`);
+                if (btn) {
+                    if (g === group) {
+                        btn.className = "w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between bg-blue-50 text-blue-600 font-bold shadow-2xs";
+                    } else {
+                        btn.className = "w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium";
+                    }
+                }
+            });
+
+            if (group === 'all') {
+                renderDatabase(partDatabase);
+            } else {
+                const filtered = partDatabase.filter(i => i.group === group);
+                renderDatabase(filtered);
+            }
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) searchInput.value = '';
+        }
+
+        // 搜尋功能
+        function searchDatabase() {
+            const searchInput = document.getElementById('searchInput');
+            if (!searchInput) return;
+            const query = searchInput.value.toLowerCase().trim();
+            let baseList = currentGroup === 'all' ? partDatabase : partDatabase.filter(i => i.group === currentGroup);
+            if (query !== '') {
+                baseList = baseList.filter(i => i.name.toLowerCase().includes(query) || i.pn.toLowerCase().includes(query) || i.desc.toLowerCase().includes(query));
+            }
+            renderDatabase(baseList);
+        }
+
+        // 後台表格渲染
+        function renderAdminTable() {
+            const tbody = document.getElementById('adminTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            partDatabase.forEach((item, index) => {
+                tbody.innerHTML += `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="p-3">
+                            <div class="w-10 h-10 rounded-lg overflow-hidden bg-slate-200">
+                                <img src="${item.img || ''}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60'">
+                            </div>
+                        </td>
+                        <td class="p-3 font-bold text-slate-900">${item.name}</td>
+                        <td class="p-3 font-mono text-blue-600">${item.pn}</td>
+                        <td class="p-3 uppercase font-mono text-slate-500">${item.group}</td>
+                        <td class="p-3 text-right space-x-2">
+                            <button onclick="editProduct(${index})" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg transition font-bold"><i class="fa-solid fa-pen"></i></button>
+                            <button onclick="deleteProduct(${index})" class="bg-red-50 hover:bg-red-100 text-red-600 px-3 py-1.5 rounded-lg transition font-bold"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        // 後台 Modal 控制
+        function openProductModal(index = -1) {
+            document.getElementById('editIndex').value = index;
+            const modalTitle = document.getElementById('modalTitle');
+            
+            if (index === -1) {
+                modalTitle.innerText = "新增產品";
+                document.getElementById('prodGroup').value = "butterfly";
+                document.getElementById('prodName').value = "";
+                document.getElementById('prodPn').value = "";
+                document.getElementById('prodDesc').value = "";
+                document.getElementById('prodImg').value = "";
+                document.getElementById('prodLink').value = "https://www.lamitech.com.tw";
+            } else {
+                modalTitle.innerText = "編輯產品";
+                const item = partDatabase[index];
+                document.getElementById('prodGroup').value = item.group;
+                document.getElementById('prodName').value = item.name;
+                document.getElementById('prodPn').value = item.pn;
+                document.getElementById('prodDesc').value = item.desc;
+                document.getElementById('prodImg').value = item.img || "";
+                document.getElementById('prodLink').value = item.link || "";
+            }
+
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        function handleProductSubmit(e) {
+            e.preventDefault();
+            const index = parseInt(document.getElementById('editIndex').value);
+            const newItem = {
+                id: index === -1 ? Date.now() : partDatabase[index].id,
+                group: document.getElementById('prodGroup').value,
+                name: document.getElementById('prodName').value,
+                pn: document.getElementById('prodPn').value,
+                desc: document.getElementById('prodDesc').value,
+                img: document.getElementById('prodImg').value,
+                link: document.getElementById('prodLink').value
+            };
+
+            if (index === -1) {
+                partDatabase.unshift(newItem);
+            } else {
+                partDatabase[index] = newItem;
+            }
+
+            saveToStorage();
+            closeProductModal();
+            renderAdminTable();
+            renderDatabase(partDatabase);
+            alert("產品資料儲存成功！");
+        }
+
+        function editProduct(index) {
+            openProductModal(index);
+        }
+
+        function deleteProduct(index) {
+            if (confirm(`確定要刪除產品「${partDatabase[index].name}」嗎？`)) {
+                partDatabase.splice(index, 1);
+                saveToStorage();
+                renderAdminTable();
+                renderDatabase(partDatabase);
+            }
+        }
+
+        // 初始化載入
+        renderDatabase(partDatabase);
+    </script>
+</body>
+</html>
