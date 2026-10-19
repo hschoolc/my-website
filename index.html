@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>半導體真空閥門維修與零件庫 | Semiconductor Vacuum Valve Repair & Parts | 欣科國際 Prima International</title>
+    <meta name="description" content="欣科國際提供半導體真空閥門維修、翻修及零件供應服務。Prima International provides semiconductor vacuum valve repair, overhaul, and parts supply.">
+    <meta name="keywords" content="欣科國際, Prima International, Butterfly Throttle Valve, AMAT throttle valve, VAT valve, MKS 253B, 真空閥門維修, vacuum valve repair, semiconductor valve overhaul">
+
+    <!-- Tailwind CSS 現代化排版框架 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+    
+    <!-- Schema.org 結構化數據 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "欣科國際有限公司",
+      "alternateName": "Prima International Co., Ltd.",
+      "description": "半導體真空閥門維修與零件供應 / Semiconductor vacuum valve repair and parts supply.",
+      "url": "http://www.prima-biz.com.tw",
+      "telephone": "+886-3-5370025",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 718, Section 6, Jhonghua Road",
+        "addressLocality": "Xiangshan District",
+        "addressRegion": "Hsinchu City",
+        "alternateName": "中華路六段 718 號，香山區",
+        "postalCode": "30095",
+        "addressCountry": "TW"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
+
+    <!-- 頂部導覽列 -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-6 py-4 shadow-xs">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchPage('home')">
+                <div class="w-12 h-12 rounded-xl border border-slate-200 overflow-hidden bg-white flex items-center justify-center p-1 shadow-xs">
+                    <img src="img/team/prima_tw.jpg" alt="欣科國際 Logo / Prima International logo" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60';">
+                </div>
+                <div>
+                    <h1 class="font-bold text-sm text-slate-900 leading-tight">欣科國際有限公司 <span class="text-xs text-slate-500 font-normal">Prima International Co., Ltd</span></h1>
+                    <p class="text-[11px] text-blue-600 font-medium">半導體真空閥門專業服務商 / Best Vacuum Valve Service Provider for Semiconductor</p>
+                </div>
+            </div>
+            
+            <!-- 多頁切換導覽按鈕 -->
+            <nav class="hidden lg:flex items-center space-x-6 text-xs font-bold text-slate-600">
+                <button onclick="switchPage('home')" id="nav_home" class="hover:text-blue-600 transition text-blue-600">首頁 Home</button>
+                <button onclick="switchPage('services')" id="nav_services" class="hover:text-blue-600 transition">維修服務 Repair Services</button>
+                <button onclick="switchPage('products')" id="nav_products" class="hover:text-blue-600 transition">產品介紹 Product</button>
+                <button onclick="switchPage('about')" id="nav_about" class="hover:text-blue-600 transition">關於我們 About</button>
+                <button onclick="switchPage('centers')" id="nav_centers" class="hover:text-blue-600 transition">服務據點 Service Center</button>
+                <button onclick="switchPage('contact')" id="nav_contact" class="hover:text-blue-600 transition">聯絡我們 Contact</button>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:035370025" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> 03-5370025
+                </a>
+                <button onclick="checkAdminAccess()" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition shadow-sm flex items-center gap-1.5" title="管理者登入 / Administrator Login">
+                <i class="fa-solid fa-lock text-[10px]"></i> 後台 / Admin
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主體內容容器 -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6">
+
+        <!-- ================= PAGE: HOME 首頁 ================= -->
+        <div id="page_home" class="page-content space-y-6">
+            <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-xs relative overflow-hidden flex flex-col md:flex-row justify-between items-center">
+                <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-blue-50 rounded-full blur-3xl"></div>
+                <div class="max-w-2xl z-10 mb-8 md:mb-0">
+                    <span class="bg-blue-50 text-blue-600 text-[11px] font-bold tracking-wider px-3.5 py-1.5 rounded-full uppercase inline-block mb-4">
+                        Semiconductor Vacuum Expert
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight">
+                        Best Vacuum Valve <br><span class="text-blue-600">Service Provider.</span>
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                        欣科國際有限公司以滿足客戶在電子科技產業製造方面之材料與服務需求為主要目標，提供完整的服務設計、品質管理與成本規劃，協同上下游夥伴創造國際競爭優勢。<br>
+                        Prima International aims to meet the material and service needs of the electronics manufacturing industry. We provide integrated service planning, quality management, and cost control, working with our partners to build a competitive advantage in global markets.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="switchPage('services')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-5 py-3 rounded-xl transition shadow-sm">瀏覽維修服務 / Browse Repair Services</button>
+                        <button onclick="switchPage('products')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition shadow-sm">查看產品目錄 / View Product Catalog</button>
+                    </div>
+                </div>
+                <div class="w-full md:w-80 bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-xs z-10 text-xs space-y-3">
+                    <h4 class="font-bold text-slate-900 border-b border-slate-200 pb-2 mb-2">快速分頁導覽 / Quick Navigation</h4>
+                    <button onclick="switchPage('services')" class="block text-left text-slate-600 hover:text-blue-600 transition">維修服務與作業流程 / Repair Services & Process</button>
+                    <button onclick="switchPage('products')" class="block text-left text-slate-600 hover:text-blue-600 transition">產品目錄與零件資料庫 / Products & Parts Catalog</button>
+                    <button onclick="switchPage('about')" class="block text-left text-slate-600 hover:text-blue-600 transition">關於我們 / About Us</button>
+                    <button onclick="switchPage('centers')" class="block text-left text-slate-600 hover:text-blue-600 transition">全球服務據點 / Global Service Centers</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: SERVICES 服務項目 (完整整合 word 文件) ================= -->
+        <div id="page_services" class="page-content hidden space-y-6">
+            <!-- 服務分頁主頁標頭 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 gap-4">
+                    <div>
+                        <span class="bg-blue-50 text-blue-600 text-[11px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-1">Repair Services</span>
+                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase">維修服務 REPAIR SERVICES</h3>
+                        <p class="text-xs text-slate-500">品質 · 服務 · 成本 · 效率｜提供半導體與光電設備真空閥門之大修、翻修與校正測試<br>Quality · Service · Cost · Efficiency | Overhaul, refurbishment, and calibration testing for semiconductor and optoelectronics vacuum valves.</p>
+                    </div>
+                    
+                    <!-- 服務次級分類切換頁籤 -->
+                    <div class="flex flex-wrap gap-2 text-xs font-bold">
+                        <button onclick="switchServiceTab('items')" id="stab_items" class="bg-blue-600 text-white px-4 py-2.5 rounded-xl transition shadow-xs">維修服務項目 / Repair Services</button>
+                        <button onclick="switchServiceTab('flow')" id="stab_flow" class="bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition">維修流程 Repair Flow</button>
+                        <button onclick="switchServiceTab('quality')" id="stab_quality" class="bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition">品質系統 Quality System</button>
+                        <button onclick="switchServiceTab('env')" id="stab_env" class="bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition">維修環境 Environment</button>
+                    </div>
+                </div>
+
+                <!-- 1. TAB: 維修產品項目 (結合 6 大核心分類導覽) -->
+                <div id="service_tab_items" class="space-y-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                        <!-- 6 大核心分類左側選擇列 -->
+                        <div class="lg:col-span-4 space-y-2">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-2 mb-2">維修類別篩選 / Filter by Service Category</h4>
+                            <button onclick="filterServiceGroup('all')" id="sbtn_all" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between bg-blue-50 text-blue-600 font-bold shadow-xs">
+                                <span>全部維修項目總覽 <span class="block text-[10px] text-slate-400 font-normal">All 15 Service Items</span></span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                            <button onclick="filterServiceGroup('butterfly')" id="sbtn_butterfly" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                                <span>1. Butterfly Throttle Valve <span class="block text-[10px] text-slate-400 font-normal">真空蝴蝶閥</span></span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                            <button onclick="filterServiceGroup('gate')" id="sbtn_gate" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                                <span>2. Vacuum Gate Valve <span class="block text-[10px] text-slate-400 font-normal">真空開關閥</span></span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                            <button onclick="filterServiceGroup('door')" id="sbtn_door" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                                <span>3. Vacuum Door Valve <span class="block text-[10px] text-slate-400 font-normal">真空腔體閥門 (Slit Valve & Reactor)</span></span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                            <button onclick="filterServiceGroup('pendulum')" id="sbtn_pendulum" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                                <span>4. Pendulum Valve <span class="block text-[10px] text-slate-400 font-normal">鐘擺閥 & HDP Turbo Valve</span></span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                            <button onclick="filterServiceGroup('isolation')" id="sbtn_isolation" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                                <span>5. Vacuum Isolation Valve <span class="block text-[10px] text-slate-400 font-normal">真空管開關閥</span></span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                            <button onclick="filterServiceGroup('actuator')" id="sbtn_actuator" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                                <span>6. Lift Actuator & Others <span class="block text-[10px] text-slate-400 font-normal">升降機構, 機械手臂, Pump, 馬達</span></span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- 右側詳細維修清單容器 -->
+                        <div class="lg:col-span-8 space-y-4" id="serviceListContainer">
+                            <!-- JS 動態生成詳細卡片 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. TAB: 維修流程 Repair Flow -->
+                <div id="service_tab_flow" class="hidden space-y-6">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100">
+                        <h4 class="text-base font-bold text-slate-900 mb-2"><i class="fa-solid fa-diagram-project text-blue-600 mr-2"></i>維修基本流程與作業內容 (Repair Flow)</h4>
+                        <p class="text-xs text-slate-500 mb-6">嚴格控管收貨、拆解、檢測、組裝測試至品管包裝之標準作業流程<br>A controlled standard workflow covering receipt, disassembly, inspection, assembly and testing, quality control, and packaging.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                                <span class="bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded text-[10px]">STEP 1</span>
+                                <h5 class="font-bold text-slate-900 text-sm">收貨與拆解清潔 / Receiving, Disassembly & Cleaning</h5>
+                                <p class="text-slate-600"><strong>作業內容 / Work:</strong> 收貨記錄、不良檢測、客訴處理、拆解、矽輪除污、拋光研磨及表面噴砂。<br>Receiving records, defect inspection, customer complaint handling, disassembly, silicon rotor decontamination, polishing, and surface sandblasting.</p>
+                                <p class="text-slate-400 text-[11px]"><strong>環境要求 / Work Areas:</strong> 碼頭區、拆解室、清潔室、委外加工 / Loading area, disassembly room, cleaning room, and subcontracted processing.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                                <span class="bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded text-[10px]">STEP 2</span>
+                                <h5 class="font-bold text-slate-900 text-sm">檢測與組裝測試 / Inspection, Assembly & Testing</h5>
+                                <p class="text-slate-600"><strong>作業內容 / Work:</strong> 電路檢測與維修、馬達維修與功能測試、感測器檢修、零組件更換、組裝校正、運轉測試及耐久與耐溫測試。<br>Electrical inspection and repair, motor servicing and functional testing, sensor inspection, component replacement, assembly and calibration, operational testing, and endurance and temperature testing.</p>
+                                <p class="text-slate-400 text-[11px]"><strong>環境要求 / Work Areas:</strong> 加工區、無塵室 / Processing area and cleanroom.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                                <span class="bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded text-[10px]">STEP 3</span>
+                                <h5 class="font-bold text-slate-900 text-sm">品管、包裝與送貨 / Quality Control, Packaging & Delivery</h5>
+                                <p class="text-slate-600"><strong>作業內容 / Work:</strong> 真空氦氣測漏、記錄與標示、潔淨包裝、送貨記錄及客戶服務。<br>Helium leak testing, documentation and labeling, clean packaging, delivery records, and customer service.</p>
+                                <p class="text-slate-400 text-[11px]"><strong>環境要求 / Work Areas:</strong> 無塵室、碼頭區及客戶交貨地點 / Cleanroom, loading area, and customer delivery locations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. TAB: 品質系統 Quality System -->
+                <div id="service_tab_quality" class="hidden space-y-6">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 space-y-4">
+                        <h4 class="text-base font-bold text-slate-900"><i class="fa-solid fa-award text-blue-600 mr-2"></i>品質系統與看板管理 (Quality System)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            欣科國際建立完善之品質管理系統（IQC 進料檢驗、IPQC 製程檢驗、OQC 出貨檢驗），配合持續改善研討與客訴處理機制，確保每一支維修閥門皆能達到穩定的運轉品質。<br>
+                            Prima International maintains a comprehensive quality management system covering incoming, in-process, and outgoing quality control (IQC, IPQC, and OQC). Together with continuous-improvement workshops and a customer-complaint process, it helps ensure reliable performance for every serviced valve.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs pt-2">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-1">
+                                <strong class="text-slate-900 block font-bold text-sm mb-1"><i class="fa-solid fa-chalkboard text-blue-600 mr-1.5"></i>生產流程指示看板 / Production Workflow Board</strong>
+                                <p class="text-slate-600">• 進度管理與注意事項提醒 / Progress tracking and work reminders</p>
+                                <p class="text-slate-600">• 急件、一般件與異常件分類追蹤 / Separate tracking for urgent, standard, and exception jobs</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-1">
+                                <strong class="text-slate-900 block font-bold text-sm mb-1"><i class="fa-solid fa-user-graduate text-blue-600 mr-1.5"></i>品質改善宣導與教育訓練 / Quality Improvement & Training</strong>
+                                <p class="text-slate-600">• 定期更新標準作業程序並進行改善訓練 / Regular SOP updates and improvement training</p>
+                                <p class="text-slate-600">• 異常案例宣導與技術認證 / Issue awareness and technical certification</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. TAB: 維修環境 Environment -->
+                <div id="service_tab_env" class="hidden space-y-6">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 space-y-6">
+                        <h4 class="text-base font-bold text-slate-900"><i class="fa-solid fa-house-laptop text-blue-600 mr-2"></i>維修環境與廠物設施 (Environment & Clean Room)</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-2">
+                                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">CLEAN ROOM</span>
+                                <h5 class="font-bold text-slate-900 text-sm">潔淨室 (Clean Room)</h5>
+                                <p><strong>潔淨度 Particle Spec :</strong> Class 5000 with 0.3 µm</p>
+                                <p><strong>面積 Area :</strong> 30 坪 ( 100 m² )</p>
+                                <p><strong>潔淨網風車 HEPA Fans :</strong> 6 台</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-2">
+                                <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">ULTRA CLEAN</span>
+                                <h5 class="font-bold text-slate-900 text-sm">超潔淨作業區 (Mini-Environment)</h5>
+                                <p><strong>潔淨度 Spec :</strong> Class 100 (&lt; 0.1 µm)</p>
+                                <p class="text-slate-500">專用於高精度晶圓傳送閥門與光學組件組裝作業<br>Dedicated to assembling high-precision wafer transfer valves and optical components.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3 text-xs">
+                            <h5 class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2">廠房設施與校正量測儀器 / Facility & Calibration Equipment</h5>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
+                                <p>• 噴砂除污設施 2 台 / 2 sandblasting and decontamination units</p>
+                                <p>• 車床加工設施 2 台 / 2 lathes</p>
+                                <p>• 潔淨用空氣 (CDA) with 0.01µm, 去水能力 99.9%</p>
+                                <p>• CNC 加工設備 1 台 / 1 CNC machining center</p>
+                                <p>• 自動測試儀器，確保運轉正常 / Automated test equipment for operational verification</p>
+                                <p>• 模擬 Chamber for Pressure Servo Test</p>
+                                <p>• 氦氣測漏儀器 (He Leakage Detector & Jig)</p>
+                                <p>• 高溫環境耐久性測試 / High-temperature endurance and reliability testing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= PAGE: PRODUCTS 產品介紹 ================= -->
+        <div id="page_products" class="page-content hidden grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div class="lg:col-span-4 space-y-6">
+                <div class="bg-white rounded-3xl p-4 border border-slate-200 shadow-xs">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-3 mb-3">零件與型號分類快速導覽 / Product Categories</h3>
+                    <div class="space-y-1">
+                        <button onclick="filterGroup('all')" id="btn_all" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between bg-blue-50 text-blue-600 font-bold shadow-xs">
+                            <span>全部零件與型號總覽 <span class="block text-[10px] text-slate-400 font-normal">Complete Inventory</span></span>
+                            <span id="count_all" class="text-[10px] text-slate-500 font-semibold"></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('butterfly')" id="btn_butterfly" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Butterfly Throttle Valve <span class="block text-[10px] text-slate-400 font-normal">真空蝴蝶閥</span></span>
+                            <span id="count_butterfly" class="text-[10px] text-slate-500 font-semibold"></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('gate')" id="btn_gate" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Vacuum Gate Valve <span class="block text-[10px] text-slate-400 font-normal">真空開關閥</span></span>
+                            <span id="count_gate" class="text-[10px] text-slate-500 font-semibold"></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('door')" id="btn_door" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Vacuum Door Valve <span class="block text-[10px] text-slate-400 font-normal">真空腔體閥門</span></span>
+                            <span id="count_door" class="text-[10px] text-slate-500 font-semibold"></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('pendulum')" id="btn_pendulum" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Pendulum Valve <span class="block text-[10px] text-slate-400 font-normal">鐘擺閥</span></span>
+                            <span id="count_pendulum" class="text-[10px] text-slate-500 font-semibold"></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('isolation')" id="btn_isolation" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Vacuum Isolation Valve <span class="block text-[10px] text-slate-400 font-normal">真空管開關閥</span></span>
+                            <span id="count_isolation" class="text-[10px] text-slate-500 font-semibold"></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button onclick="filterGroup('actuator')" id="btn_actuator" class="w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium">
+                            <span>Lift Actuator <span class="block text-[10px] text-slate-400 font-normal">升降驅動機構 (汽缸 & 馬達)</span></span>
+                            <span id="count_actuator" class="text-[10px] text-slate-500 font-semibold"></span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 space-y-6">
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs">
+                    <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">產品目錄 / Product Catalog</span>
+                    <h3 class="text-xl font-black text-slate-900 mt-1">產品介紹 Product</h3>
+                    <p class="text-xs text-slate-500 mt-1">服務 · 品質 · 成本 · 效率｜瀏覽產品照片與型號，或使用下方搜尋查詢。<br>Service · Quality · Cost · Efficiency | Browse product photos and models, or search below.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 mb-6 gap-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">真空閥門與零件型號清單 / Valve & Parts Catalog <span id="visibleProductCount" class="text-xs font-medium text-slate-500"></span></h4>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="searchInput" placeholder="輸入型號或 P/N 搜尋 / Search model or P/N..." oninput="searchDatabase()" class="bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-xs text-slate-800 focus:outline-none focus:border-blue-600 w-full sm:w-60">
+                        </div>
+                    </div>
+                    <div id="databaseGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[550px] overflow-y-auto pr-2 custom-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: ADMIN 後台管理面板 ================= -->
+        <div id="page_admin" class="page-content hidden space-y-6 max-w-5xl mx-auto">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-4 gap-3">
+                    <div>
+                        <span class="bg-slate-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Admin Panel</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-1">產品後台管理系統 / Product Admin <span id="adminProductCount" class="text-sm font-medium text-slate-500"></span></h3>
+                        <p class="text-xs text-slate-500">在此新增/修改產品。完成測試後，請點擊「匯出 data.js 檔案」，連同 img 照片一起上傳伺服器即可同步！<br>Add or edit products here. Export data.js and upload it with the image files to publish changes.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="exportDataJs()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-download"></i> 匯出 data.js 檔案 / Export data.js
+                        </button>
+                        <button onclick="openProductModal()" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-plus"></i> 新增產品 / Add Product
+                        </button>
+                        <button onclick="switchPage('products')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2.5 rounded-xl transition">
+                            返回前台 / Back to Catalog
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-50 text-slate-500 uppercase border-b border-slate-200">
+                            <tr>
+                                <th class="p-3">圖片 / Image</th>
+                                <th class="p-3">產品名稱 / Product</th>
+                                <th class="p-3">零件編號 / Part Number (P/N)</th>
+                                <th class="p-3">類別 / Category</th>
+                                <th class="p-3 text-right">操作 / Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminTableBody" class="divide-y divide-slate-100"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: ABOUT 關於我們 ================= -->
+        <div id="page_about" class="page-content hidden space-y-6">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-8">
+                <!-- 公司 Logo 與名稱 -->
+                <div class="flex items-center gap-4 border-b border-slate-100 pb-6">
+                    <img src="img/team/prima_tw.jpg" alt="欣科國際 Logo / Prima International logo" class="w-24 h-24 object-contain rounded-2xl border border-slate-200 bg-slate-50 p-2" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60';">
+                    <div>
+                        <span class="bg-blue-50 text-blue-600 text-[11px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-1">About Us</span>
+                        <h3 class="text-2xl font-black text-slate-900 uppercase">欣科國際有限公司 / Prima International Co., Ltd.</h3>
+                        <p class="text-xs text-slate-500">Prima International Co., Ltd ｜ 專業半導體真空閥門維修與零組件開發</p>
+                    </div>
+                </div>
+
+                <!-- 聯絡資訊區塊 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
+                        <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">TAIWAN</span>
+                        <h4 class="font-bold text-sm text-slate-900">欣科國際有限公司 / Prima International Co., Ltd.</h4>
+                        <p><strong>地址 / Address:</strong> 30095 新竹市香山區中華路六段 718 號<br>No. 718, Section 6, Jhonghua Road, Xiangshan District, Hsinchu City 30095, Taiwan</p>
+                        <p><strong>TEL :</strong> +886-3-537-0025</p>
+                        <p><strong>FAX :</strong> +886-3-537-0189</p>
+                        <p><strong>e-Mail :</strong> <a href="mailto:service@prima-biz.com.tw" class="text-blue-600 hover:underline">service@prima-biz.com.tw</a></p>
+                        <p><strong>Website :</strong> <a href="http://www.prima-biz.com.tw" target="_blank" class="text-blue-600 hover:underline">http://www.prima-biz.com.tw</a></p>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
+                        <span class="bg-slate-900 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">CHINA</span>
+                        <h4 class="font-bold text-sm text-slate-900">宏圖（蘇州工業園區）半導體技術服務有限公司 / Hongtu (Suzhou Industrial Park) Semiconductor Technology Services Co., Ltd.</h4>
+                        <p><strong>地址 / Address:</strong> 215000 蘇州工業園區雙泾街 59 號 4 號樓 208 室（雅景高新科技園）<br>Room 208, Building 4, Yajing High-Tech Park, No. 59 Shuangjing Street, Suzhou Industrial Park, Suzhou 215000, China</p>
+                        <p><strong>TEL :</strong> +86-512-6288-8579 ｜ <strong>FAX :</strong> +86-512-6288-7659</p>
+                        <p><strong>業務手機 / Mobile:</strong> +86-139-1313-4978 (陳先生 / Mr. Chen / Bill Chen)</p>
+                        <p><strong>e-mail :</strong> <a href="mailto:bill_chen@lamitech.com.tw" class="text-blue-600 hover:underline">bill_chen@lamitech.com.tw</a></p>
+                        <p><strong>Website :</strong> <a href="http://www.kel-semi.com.cn" target="_blank" class="text-blue-600 hover:underline">http://www.kel-semi.com.cn</a></p>
+                    </div>
+                </div>
+
+                <!-- 公司經營簡介 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-4">
+                    <h4 class="font-bold text-base text-slate-900 border-b border-slate-200 pb-2">欣科國際有限公司簡介 / About Prima International</h4>
+                    <p>
+                    欣科國際有限公司創立於 2002 年，主要提供半導體與光電設備零件供應及真空閥門維修服務，並持續開發科技產品、提升服務品質，以滿足客戶全方位需求。<br>
+                    Founded in 2002, Prima International supplies parts for semiconductor and optoelectronics equipment and provides vacuum valve repair services. We continue to develop technology products and improve our service to meet our customers' needs.
+                    </p>
+                    <div>
+                        <strong class="text-slate-900 block mb-1 font-bold">經營方針 / Business Principles:</strong>
+                        品質、服務、成本、效率 / Quality, Service, Cost, and Efficiency
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 mb-4">公司發展歷史沿革 Timeline</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">1996：</strong>公司成立於新竹／竹北，並設立銷售服務部門。<br>Founded in Hsinchu and Zhubei and established the sales and service department.</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">1997：</strong>成立半導體真空閥件維修服務部門。<br>Established the semiconductor vacuum valve repair service department.</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">1999：</strong>開始銷售半導體零件與材料。<br>Began supplying semiconductor parts and materials.</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2001：</strong>開始提供自動控制設計與服務。<br>Started providing automation control design and services.</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2003：</strong>成立光電事業部門。<br>Established the optoelectronics division.</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2004：</strong>成立中國蘇州維修中心。<br>Opened the Suzhou service center in China.</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2006：</strong>遷至新竹市香山區新址。<br>Relocated to a new facility in Xiangshan District, Hsinchu City.</div>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100"><strong class="text-blue-600 font-bold">2007–2010：</strong>閥件維修拓展至國際市場，並全面導入電腦化管理。<br>Expanded valve repair services internationally and implemented computerized operations.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: CENTERS 服務據點 ================= -->
+        <div id="page_centers" class="page-content hidden space-y-6">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-6">
+                <div class="flex items-center gap-4 border-b border-slate-100 pb-6">
+                    <img src="img/team/prima_tw.jpg" alt="欣科國際 Logo / Prima International logo" class="w-20 h-20 object-contain rounded-xl border border-slate-200 bg-slate-50 p-2" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60';">
+                    <div>
+                        <span class="bg-blue-50 text-blue-600 text-[11px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-1">Service Center</span>
+                        <h3 class="text-2xl font-black text-slate-900 uppercase">全球服務據點 WORLD WIDE SERVICE CENTER</h3>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4 text-xs">
+                    <!-- 欣科國際 -->
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2">
+                        <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">TAIWAN</span>
+                        <h4 class="font-bold text-slate-900">欣科國際有限公司 / Prima International Co., Ltd.</h4>
+                        <p class="text-slate-600">地址 / Address: 新竹市香山區中華路六段 718 號<br>No. 718, Section 6, Jhonghua Road, Xiangshan District, Hsinchu City, Taiwan</p>
+                        <p>TEL : 03-537-0025</p>
+                        <p>FAX : 03-537-0189</p>
+                        <a href="mailto:service@prima-biz.com.tw" class="text-blue-600 font-medium hover:underline block">service@prima-biz.com.tw</a>
+                    </div>
+                    <!-- 宏圖(蘇州) -->
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2">
+                        <span class="bg-slate-900 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">CHINA</span>
+                        <h4 class="font-bold text-slate-900">宏圖（蘇州）半導體技術服務 / Hongtu (Suzhou) Semiconductor Technology Services</h4>
+                        <p class="text-slate-600">地址 / Address: 蘇州工業園區雙泾街 59 號 4 號樓 208 室<br>Room 208, Building 4, No. 59 Shuangjing Street, Suzhou Industrial Park, Suzhou, China</p>
+                        <p>TEL : 0512-6288-8579</p>
+                        <p>業務手機 / Mobile : 139-1313-4978 (陳先生 / Mr. Chen)</p>
+                        <a href="mailto:bill_chen@lamitech.com.tw" class="text-blue-600 font-medium hover:underline block">bill_chen@lamitech.com.tw</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: CONTACT 聯絡我們 ================= -->
+        <div id="page_contact" class="page-content hidden space-y-6">
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl max-w-3xl mx-auto">
+                <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase inline-block mb-2">Contact Us</span>
+                <h3 class="text-2xl font-black uppercase mb-4">聯絡我們 / Contact Us ｜ 欣科國際有限公司 / Prima International</h3>
+                <div class="text-xs text-slate-300 space-y-2 mb-6">
+                    <p><strong>地址 / Address:</strong> 30095 新竹市香山區中華路六段 718 號<br>No. 718, Section 6, Jhonghua Road, Xiangshan District, Hsinchu City 30095, Taiwan</p>
+                    <p><strong>TEL :</strong> +886-3-5370025 ｜ <strong>FAX :</strong> +886-3-5370189</p>
+                    <p><strong>Email :</strong> service@prima-biz.com.tw</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('感謝您的填寫！表單已送出，工程團隊將盡速與您聯繫。 / Thank you. Your message has been sent, and our service team will contact you shortly.');" class="space-y-3 text-xs">
+                    <div>
+                        <input type="text" required placeholder="姓名 / 公司名稱 Name / Company" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <input type="tel" required placeholder="聯絡電話 / 分機 Phone / Ext." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <textarea rows="3" required placeholder="請輸入維修或設備需求 / Describe your repair or equipment needs..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition shadow-md">
+                        送出諮詢訊息 / Send Inquiry <i class="fa-solid fa-paper-plane ml-1"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 後台產品 新增/編輯 Modal 視窗 -->
+    <div id="productModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl space-y-4">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                <h3 id="modalTitle" class="font-black text-slate-900 text-sm">新增產品 / Add Product</h3>
+                <button onclick="closeProductModal()" class="text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="handleProductSubmit(event)" class="space-y-3 text-xs">
+                <input type="hidden" id="editIndex" value="-1">
+
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品分類 / Product Category</label>
+                    <select id="prodGroup" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                        <option value="butterfly">Butterfly Throttle Valve (真空蝴蝶閥)</option>
+                        <option value="gate">Vacuum Gate Valve (真空開關閥)</option>
+                        <option value="door">Vacuum Door Valve (真空腔體閥門)</option>
+                        <option value="pendulum">Pendulum Valve (鐘擺閥)</option>
+                        <option value="isolation">Vacuum Isolation Valve (真空管開關閥)</option>
+                        <option value="actuator">Lift Actuator (升降驅動機構)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品名稱（英文） / Product Name (English)</label>
+                    <input type="text" id="prodName" required placeholder="例如：AMAT eMAX 300mm Throttle Valve" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品名稱（中文） / Product Name (Chinese)</label>
+                    <input type="text" id="prodNameZh" required placeholder="例如：AMAT eMAX 300 毫米節流閥" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">零件編號 / Part Number (P/N)</label>
+                    <input type="text" id="prodPn" required placeholder="例如：0010-15321-004" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品描述（英文） / Description (English)</label>
+                    <textarea id="prodDesc" rows="2" placeholder="維修或規格說明..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600"></textarea>
+                </div>
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品描述（中文） / Description (Chinese)</label>
+                    <textarea id="prodDescZh" rows="2" placeholder="維修或規格說明..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600"></textarea>
+                </div>
+
+                <!-- 對應實際子資料夾與檔案上傳 -->
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">1. 選擇實際子資料夾 / Select Image Folder</label>
+                    <select id="prodSubFolder" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600 mb-2 font-mono">
+                        <option value="01-Butterfly">01-Butterfly</option>
+                        <option value="02-Vacuum">02-Vacuum</option>
+                        <option value="03-Door">03-Door</option>
+                        <option value="04-Pendulum">04-Pendulum</option>
+                        <option value="05-Isolation">05-Isolation</option>
+                        <option value="06-Lift">06-Lift</option>
+                    </select>
+
+                    <label class="block text-slate-600 font-bold mb-1">2. 完整圖片路徑（可手動修改） / Image Path (editable)</label>
+                    <input type="text" id="prodImg" required placeholder="例如：img/portfolio/01-Butterfly/Butterfly-01.png" oninput="updateImagePreviewFromInput(this.value)" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-mono focus:outline-none focus:border-blue-600 mb-2">
+                    
+                    <label class="block text-slate-600 font-bold mb-1">3. 選擇圖片檔案（自動帶入路徑） / Select Image File</label>
+                    <input type="file" id="imageFileInput" accept="image/*" onchange="handleFlexibleImagePick(this)" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-blue-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                    <p class="text-[10px] text-slate-400 mt-1">請先選擇子資料夾，再選取圖片；系統會自動組成 `img/portfolio/資料夾名/檔名`。<br>Select a folder, then choose an image. The path will be generated automatically as `img/portfolio/folder/filename`.</p>
+                    
+                    <!-- 即時預覽圖 -->
+                    <div id="imagePreviewContainer" class="mt-2 hidden">
+                        <span class="text-[10px] text-slate-500 font-bold block mb-1">圖片預覽 / Image Preview:</span>
+                        <img id="imagePreview" src="" width="80" height="80"
+                             onload="updateImageDimensions(this)"
+                             onerror="document.getElementById('imageDimensions').textContent='無法讀取圖片尺寸，請確認路徑或檔案。 / Unable to read image dimensions. Check the path or file.';"
+                             class="w-20 h-20 object-contain bg-white rounded-lg border border-slate-200">
+                        <p id="imageDimensions" class="text-[10px] text-slate-500 mt-1" aria-live="polite">選取照片後自動讀取尺寸並等比例縮放 / Select an image to detect its dimensions and scale it proportionally.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-slate-600 font-bold mb-1">產品連結 / Product Link URL</label>
+                    <input type="text" id="prodLink" placeholder="http://www.prima-biz.com.tw" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-600">
+                </div>
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeProductModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-4 py-2.5 rounded-xl transition">取消 / Cancel</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl transition shadow-sm">儲存 / Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="bg-white border-t border-slate-200 text-slate-500 py-6 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p>Copyright © www.prima-biz.com.tw 2026 欣科國際有限公司 / Prima International Co., Ltd. 保留所有權利 / All rights reserved.</p>
+            <button onclick="switchPage('home')" class="font-bold text-slate-700 hover:text-blue-600"><i class="fa-solid fa-arrow-up mr-1"></i> 返回首頁 / Back to Home</button>
+        </div>
+    </footer>
+
+    <!-- 載入外部資料檔 (伺服器同步用) -->
+    <script src="data.js"></script>
+
+    <script>
+        // Word 文件抽出的完整 15 大項維修服務資料庫 (搭配 6 大核心分類)
+        const fullServiceData = [
+            {
+                id: "s1",
+                group: "butterfly",
+                title: "AMAT Throttle Valve Repair & Overhaul",
+                subTitle: "Application for CVD (PECVD, SACVD, HDP), PVD (WCVD, DxZ, TxZ), Etcher equipments",
+                contents: [
+                    "Parts clean and inspection",
+                    "Motor maintain or replace new motor",
+                    "Replace all O-ring (FFKM) seal and Teflon seal",
+                    "Replace motor belt or metal gear",
+                    "Replace all bearing",
+                    "Sensor check and PCB repair",
+                    "Valve angle calibration and performance checking",
+                    "Close point & Hysteresis adjustment",
+                    "Vacuum leakage check by He leak detector"
+                ],
+                models: ["AMAT eMAX 300mm (0010-15321-004)", "12” MCVD (0010-17151)", "P5000 Etcher (0010-09119)", "200mm UPS (0010-09713)", "P5000 SACVD (0010-76174)", "P5000 PECVD (0010-09402)", "AMAT DxZ / WxZ (0010-09035)"]
+            },
+            {
+                id: "s2",
+                group: "butterfly",
+                title: "APC and Throttle Valve Repair & Overhaul",
+                subTitle: "Application for TEL, Novellus, Fuji Seiki, Horiba STEC, Nor-Cal, Pfeiffer, CKD",
+                contents: [
+                    "Parts clean & Inspection",
+                    "Replace all O-ring seal, Piston seal and Packing seal",
+                    "Replace damage parts (option)",
+                    "Function test and Valve angle calibration",
+                    "Vacuum leak check by He detector"
+                ],
+                models: ["Fuji Seiki APC (Model: 1070903)", "HORIBA STEC (EC-5000)", "Nor-Cal 300mm (22-2844)", "Pfeiffer (EVR 116)", "FUJI Butterfly (RSX-100J)", "CKD Water Valve (AMD61L)", "V-TEX/Nor-Cal Pendulum (010125-1)", "FUJIIMVAC (HVR-50HK)"]
+            },
+            {
+                id: "s3",
+                group: "butterfly",
+                title: "Tylan General, Millipore, Celerity Throttle Valve Repair",
+                subTitle: "Brand: Tylan General, Millipore, Mykrolis, Celerity APC Throttle Valve",
+                contents: [
+                    "Parts clean and inspection",
+                    "Motor maintain or replace new motor",
+                    "Replace all O-ring seal",
+                    "Shaft check or replace new one",
+                    "Replace motor belt and plastic connector",
+                    "Sensor check and PCB repair",
+                    "Valve angle calibration and performance checking",
+                    "Heater condition checking",
+                    "Vacuum leakage check by He leak detector"
+                ],
+                models: ["Tylan MDVX-100B-H", "MEGATORR MX40JIK18SIN", "Tylan MDV-015 for Novellus", "Lam PN: 0995-99712 / 853-021648", "Millipore MDVHX-100B", "Celerity MDV-018"]
+            },
+            {
+                id: "s4",
+                group: "gate",
+                title: "Vacuum Gate Valve Repair & Overhaul",
+                subTitle: "MKS, HVA, VAT, SMC, NC, MDC, VitzroTech, TAIYO Gate Valves",
+                contents: [
+                    "Parts clean",
+                    "Replace all O-ring, gasket",
+                    "Cylinder maintain and replace piston seal",
+                    "Bellows check and repair",
+                    "Valve cycle test and sensor check",
+                    "Vacuum leak check by He leak detector"
+                ],
+                models: ["VAT Pneumatic Gate Valve (01032 / S08 / S64 / S10)", "VAT 10846-XE28 / 14040-PE44", "HVA 6” Gate Valve (21251-10032)", "HVA Pneumatic Gate Valve", "MDC Manual / Pneumatic Gate Valve", "VitzroTech Gate Valve 2” ~ 12”", "TAIYO Gate Valve"]
+            },
+            {
+                id: "s5",
+                group: "door",
+                title: "DPA Reactor Assembly Repair & Overhaul",
+                subTitle: "Application for AMAT CVD equipments (PECVD, SACVD)",
+                contents: [
+                    "Parts clean",
+                    "Replace all O-ring",
+                    "Vacuum and Temperature sensor check and repair",
+                    "Fans test and repair",
+                    "Ceramic and Teflon plate check and repair",
+                    "Vacuum leak check by He leak detector"
+                ],
+                models: ["AMAT CVD DPA Reactor", "均勻有效的 Gas Trapped 噴砂粗糙化處理（延長 Pump 壽命） / Uniform gas-trap surface texturing by sandblasting to extend pump life"]
+            },
+            {
+                id: "s6",
+                group: "door",
+                title: "Slit Valve Repair & Overhaul",
+                subTitle: "SMC L-motion, VAT, V-TEX, AMAT P5000 Slit Valve",
+                contents: [
+                    "Parts clean and inspection",
+                    "Bellows inspection or replacement",
+                    "O-ring and Door Seal replacement",
+                    "L-motion alignment and pneumatic cylinder overhaul",
+                    "Vacuum leak check by He detector"
+                ],
+                models: ["SMC L-motion Slit Valve", "AMAT P5000 Slit Valve", "VAT Slit Door Valve", "V-TEX Slit Valve"]
+            },
+            {
+                id: "s7",
+                group: "pendulum",
+                title: "HDP Turbo Throttle Valve Repair & Overhaul",
+                subTitle: "Application on AMAT Producer / Centura equipments (HDP process)",
+                contents: [
+                    "Parts clean and inspection",
+                    "Motor maintain or replace new motor (option)",
+                    "Replace all O-ring (FFKM) seal and spring seal",
+                    "Replace valve plate (option) or shaft (option)",
+                    "Gear maintain or replace new gear (option)",
+                    "Replace all Alumina screw",
+                    "Sensor check and repair",
+                    "Valve angle calibration and performance checking",
+                    "Vacuum leakage check by He leak detector"
+                ],
+                models: ["HDP 200mm Turbo Throttle Valve (PK243A2A-SG36 / DH0190-01699)", "HDP 300mm Turbo Throttle Valve (0010-29980 / DH0010-04235)", "HDP 300mm (ASM46AK-T20 / 0010-33875)"]
+            },
+            {
+                id: "s8",
+                group: "isolation",
+                title: "Isolation Vacuum Valve Repair & Overhaul",
+                subTitle: "MKS, HVA, VAT, SMC, NC, MDC, CKD, Edwards, Varian, KITZ",
+                contents: [
+                    "Parts clean & Inspection",
+                    "Replace all O-ring seal",
+                    "Cylinder maintain and replace piston all ring",
+                    "Bellow leak check or replace new bellows (option)",
+                    "Function cycle test",
+                    "Leakage check"
+                ],
+                models: ["MKS Two Stage Angle Valve (L2-40-SP1 / V2-100)", "SMC High Vacuum Valve (XLD-40/50/80/100 / XYA-80)", "CKD Angle Valve (AVB932 / AMD512)", "AKT 4300/5500 Main Valve", "MDC KAV150P (AMAT 3870-01334)", "Varian NW16/NW25/NW80 Valve", "Nor-Cal ISO Valve"]
+            },
+            {
+                id: "s9",
+                group: "actuator",
+                title: "Lift Arm Assembly Repair & Overhaul",
+                subTitle: "Include Motor type and Cylinder type for Wafer / Susceptor Lift",
+                contents: [
+                    "Parts clean and inspection",
+                    "Cylinder maintenance and replace piston ring",
+                    "Motor repair, replace belts and new bearing (if need)",
+                    "Bellows repair (if need)",
+                    "Cylinder air pressure leak check",
+                    "Sensor signal check and repair"
+                ],
+                models: ["AMAT P5000 CVD Wafer / Susceptor Lift Assembly (0010-10033)", "AMAT ENDURA Heater Lift (0010-70271)", "AMAT Endura PRECLEAN (0010-20753)", "AMAT Wafer Lift (0100-13774)", "SMC Rotary Cylinder", "Kuroda / Norgren / TAIYO Cylinder"]
+            },
+            {
+                id: "s10",
+                group: "actuator",
+                title: "Toroidal Orifice of WJ-999 / WJ-1000 / WJ-1500 Repair",
+                subTitle: "Application for WJ APCVD equipment (LCD, LED, Semiconductor)",
+                contents: [
+                    "Parts clean",
+                    "Replace all bearing, Spring 刮刀",
+                    "Sensor board, Wire, Connector repair",
+                    "Motor maintain or Replace new motor",
+                    "Hole size check and recoating",
+                    "Long time (24 hours) Burn-in test"
+                ],
+                models: ["WJ-999, WJ-999R, WJ-999TEOS TO", "WJ-1000, WJ-1500 TO / VTO", "WJ Injector Hoist 吊車", "Toroidal hole set for WJ-1000", "Sensor Board & New Orifice (SP-WJ026)"]
+            },
+            {
+                id: "s11",
+                group: "actuator",
+                title: "Robot Arm System Repair & Overhaul",
+                subTitle: "AMAT Robot Arm, Novellus MAG-7, WJ Injector Hoist, HP Robot Motor",
+                contents: [
+                    "Parts clean",
+                    "Replace all bearing",
+                    "Parts inspection and replace damage parts",
+                    "Leveling check and adjustment",
+                    "Function test and cycle test"
+                ],
+                models: ["WJ-999 / WJ-1000 Injector Hoist 吊車", "AMAT Robot Arm", "Novellus MAG-7 Robot Arm", "HP Robot Motor"]
+            },
+            {
+                id: "s12",
+                group: "actuator",
+                title: "Vacuum Pump & Blower Pump Repair & Overhaul",
+                subTitle: "Showa Denki, AMNEK, ORBOTECH Blower Pump (LCD光電業 / 半導體業)",
+                contents: [
+                    "Pump chamber clean and decontamination",
+                    "Replace rotor bearings and mechanical seals",
+                    "Motor rewinding and dynamic balance adjustment",
+                    "Vacuum level and pressure flow testing"
+                ],
+                models: ["Showa Denki Blower (ME-125H)", "AMNEK 鼓風機", "ORBOTECH Blower Pump (二顆式 / 三顆式)"]
+            },
+            {
+                id: "s13",
+                group: "actuator",
+                title: "Motor Repair (DC Servomotor / Step Motor)",
+                subTitle: "HP Robot Motor, Oriental Step Motor, Servo Motor Repair",
+                contents: [
+                    "Motor coil check and rewinding",
+                    "Encoder signal calibration",
+                    "Bearing and shaft replacement",
+                    "Load torque and high temperature testing"
+                ],
+                models: ["HP Robot Motor", "DC Servo Motors", "Stepper Motors (PK243A2A / ASM46AK)"]
+            }
+        ];
+
+        // 切換服務次頁籤 (Items, Flow, Quality, Environment)
+        function switchServiceTab(tabName) {
+            ['items', 'flow', 'quality', 'env'].forEach(t => {
+                const tabEl = document.getElementById(`service_tab_${t}`);
+                const btnEl = document.getElementById(`stab_${t}`);
+                if (tabEl) {
+                    if (t === tabName) tabEl.classList.remove('hidden');
+                    else tabEl.classList.add('hidden');
+                }
+                if (btnEl) {
+                    if (t === tabName) {
+                        btnEl.className = "bg-blue-600 text-white px-4 py-2.5 rounded-xl transition shadow-xs font-bold";
+                    } else {
+                        btnEl.className = "bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition font-bold";
+                    }
+                }
+            });
+        }
+
+        // 渲染服務項目清單
+        function renderServiceItems(items) {
+            const container = document.getElementById('serviceListContainer');
+            if (!container) return;
+            container.innerHTML = '';
+
+            if (items.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-slate-400 text-xs">查無對應之維修服務項目 / No matching repair services found.</div>`;
+                return;
+            }
+
+            items.forEach(s => {
+                let contentsHtml = s.contents.map(c => `<li><i class="fa-solid fa-check text-blue-600 mr-1.5 text-[10px]"></i>${c}</li>`).join('');
+                let modelsHtml = s.models ? s.models.map(m => `<span class="bg-slate-100 text-slate-700 text-[10px] px-2 py-0.5 rounded font-mono border border-slate-200">${m}</span>`).join(' ') : '';
+
+                container.innerHTML += `
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 hover:border-blue-300 transition space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="bg-blue-100 text-blue-700 text-[9px] font-bold px-2 py-0.5 rounded font-mono">${productGroupLabels[s.group] || s.group}</span>
+                                <h4 class="font-bold text-sm text-slate-900 mt-1">${s.title}</h4>
+                                <p class="text-[11px] text-slate-500 font-medium">${s.subTitle}</p>
+                            </div>
+                            <a href="tel:035370025" class="bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg transition shadow-xs flex items-center gap-1">
+                                <i class="fa-solid fa-phone"></i> 諮詢維修 / Request Service
+                            </a>
+                        </div>
+
+                        <div>
+                            <strong class="text-[11px] text-slate-700 font-bold block mb-1">維修作業內容 / Repair Contents:</strong>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-slate-600">
+                                ${contentsHtml}
+                            </ul>
+                        </div>
+
+                        ${s.models && s.models.length > 0 ? `
+                        <div class="pt-2 border-t border-slate-200/60">
+                            <strong class="text-[10px] text-slate-500 font-bold block mb-1">對應支援型號 / Supported Models & P/N:</strong>
+                            <div class="flex flex-wrap gap-1.5">
+                                ${modelsHtml}
+                            </div>
+                        </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+        }
+
+        // 過濾服務類別
+        function filterServiceGroup(group) {
+            ['all', 'butterfly', 'gate', 'door', 'pendulum', 'isolation', 'actuator'].forEach(g => {
+                const btn = document.getElementById(`sbtn_${g}`);
+                if (btn) {
+                    if (g === group) {
+                        btn.className = "w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between bg-blue-50 text-blue-600 font-bold shadow-2xs";
+                    } else {
+                        btn.className = "w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium";
+                    }
+                }
+            });
+
+            if (group === 'all') {
+                renderServiceItems(fullServiceData);
+            } else {
+                const filtered = fullServiceData.filter(i => i.group === group);
+                renderServiceItems(filtered);
+            }
+        }
+
+        // 多頁切換邏輯
+        function switchPage(pageId) {
+            const pages = ['home', 'services', 'products', 'admin', 'about', 'centers', 'contact'];
+            
+            pages.forEach(p => {
+                const el = document.getElementById(`page_${p}`);
+                const nav = document.getElementById(`nav_${p}`);
+                if (el) {
+                    if (p === pageId) el.classList.remove('hidden');
+                    else el.classList.add('hidden');
+                }
+                if (nav) {
+                    if (p === pageId) nav.classList.add('text-blue-600');
+                    else nav.classList.remove('text-blue-600');
+                }
+            });
+
+            if (pageId === 'admin') renderAdminTable();
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 後台密碼驗證進入
+        function checkAdminAccess() {
+            const pwd = prompt("請輸入管理者密碼 / Enter administrator password:\n(預設密碼 / Default: admin123)");
+            if (pwd === "admin123") switchPage('admin');
+            else if (pwd !== null) alert("密碼錯誤 / Incorrect password.");
+        }
+
+        // 預設產品資料庫
+        const productCatalogVersion = 'html-products-v3';
+        let defaultDatabase = [
+            ["AMAT eMAX 300mm Throttle Valve", "AMAT PN : 0010-15321-004"],
+            ["Centura eMAX Etch Throttle Valve", ""],
+            ["12” MCVD 0010-17151", ""],
+            ["P5000 Etcher Butterfly Valve 0010-09119", "Butterfly valve gear upgrade 0010-09120"],
+            ["200mm UPS 0010-09713 (SACVD) 0010-14682", ""],
+            ["P5000 SACVD 0010-76174 / P5000 PECVD 0010-09402", ""],
+            ["AMAT MCVD 0010-04711", ""],
+            ["AMAT DxZ Throttle Valve", ""],
+            ["AMAT WxZ 0010-09035 / 0040-09032", ""],
+            ["P5000/5200 SACVD Sigma 0010-02142 / SACVD 0010-10778", ""],
+            ["Rough Throttle Valve 300MM Ultima 0010-36743", ""],
+            ["MCVD 300mm throttle valve 0010-03070", ""],
+            ["AMAT MXP Butterfly valve 0015-09077", ""],
+            ["Fuji Seiki (APC) Throttle Valve Repair Model No: 1070903 (TEL Furnace)", ""],
+            ["HORIBA STEC Valve EC-5000", ""],
+            ["Nor-Cal 300mm Butterfly Valve Model : 22-2844", ""],
+            ["Pfeiffer Vacuum Valve Type : EVR 116", ""],
+            ["FUIJI Butterfly Valve Model : RSX-100J", ""],
+            ["A&N air rotate valve Model:1539-N", "AN 1039-N"],
+            ["AN 1539-S-N", ""],
+            ["FUJIIMVAC Throttling Valve Model: HVR-50HK", ""],
+            ["FUJIIMVAC HV-50N 21", ""],
+            ["3122-828245-A-3", ""],
+            ["HDP 200mm Turbo Throttle Valve Motor type: PK243A2A-SG36", "DH0190-01699 0010-08384"],
+            ["HDP 300mm Turbo Throttle Valve Motor type: PK243A2A-SG36", "DH0010-04235 0010-29980"],
+            ["HDP 300mm Turbo Throttle Valve Motor type: ASM46AK-T20", "DH0010-29780 0010-29980, 0010-33875 0010-08452, 0010-12457"],
+            ["MKS T3B1A-26711 (3870-04724)", ""],
+            ["Toroidal Orifice WJ-999, WJ-999R, WJ-999TEOS", ""],
+            ["Toroidal Orifice WJ-1000, WJ-1500", ""],
+            ["WJ-1000, WJ-1500 VTO", ""],
+            ["Tylan (MDVX-100B-H) MEGATORR (MX40JIK18SIN)", ""],
+            ["Tylan MDVX-100B MDV-015 Millipore MDVX-100B, MDVHX-100B", ""],
+            ["Tylan (MDVX-018S01) Lam PN : 0995-99712", ""],
+            ["Tylan MDV-018, MDVX-018 Celerity MDV-018", ""],
+            ["Tylan (MDV-015) for Novellus CVD", ""],
+            ["Celerity MDVHX-100B", ""],
+            ["VAT S61.1 Butterfly Valve (61144-PA52) 61144-PH52-AAM1", ""],
+            ["VAT S61.2 Butterfly Valve (61236-PAGC)", ""],
+            ["VAT 20040-XA24", ""],
+            ["MKS 253B-13264", ""],
+            ["MKS 253B-11203, 253B-16082, 253B-23957, 253B-23958, 253B-15488, 253B-21495", ""],
+            ["MKS 253B-11020", ""],
+            ["MKS 253B-11102, 253B-22154, 253B-15416, 253B-15665", ""],
+            ["MKS 253B-26373", ""],
+            ["MKS 153A, 153B, 153D-15973, 153D-15972, 153D-26353", ""],
+            ["MKS 653B-22815, 653B-2-50-2, 653B-14814, 653B-4-100-2 (50105019)", ""],
+            ["MKS 253A", ""],
+            ["MKS 253B-11010, 253B-16083", ""],
+            ["MKS 253B-11247, 253B-15415, 253B-13133, 253B-14579", ""],
+            ["MKS 253B-15249, 253B-15336", ""],
+            ["MKS 253BX-13964, 253B-1-40-1", ""],
+            ["MKS T3BIA-27198, 1036564-001", ""],
+            ["MKS 653B-13552, 653B-2-50-2", ""],
+            ["MKS 253B-21977", ""],
+            ["MKS 683B-23795, 683B-24562 (0190-12708), 683B-26033", ""],
+            ["MKS 253B-15665", ""],
+            ["MKS 153D-12021", ""],
+            ["MKS 253A-12457", ""]
+        ].map((product, index) => ({
+            id: index + 1,
+            name: product[0],
+            pn: product[1],
+            group: "butterfly",
+            desc: "",
+            img: `img/portfolio/01-Butterfly/Butterfly-${String(index + 1).padStart(2, "0")}.${index >= 23 && index <= 35 || index === 38 ? "jpg" : "png"}`,
+            link: "http://www.prima-biz.com.tw"
+        }));
+
+        const storedCatalogVersion = localStorage.getItem('lamitech_products_catalog_version');
+        let partDatabase = typeof partData !== 'undefined' && typeof partDataVersion !== 'undefined' && partDataVersion === productCatalogVersion ? partData :
+            storedCatalogVersion === productCatalogVersion
+                ? (JSON.parse(localStorage.getItem('lamitech_products')) || defaultDatabase)
+                : defaultDatabase;
+
+        function saveToStorage() {
+            localStorage.setItem('lamitech_products', JSON.stringify(partDatabase));
+            localStorage.setItem('lamitech_products_catalog_version', productCatalogVersion);
+        }
+
+        let currentGroup = 'all';
+        const productGroupLabels = {
+            butterfly: '蝴蝶閥 / Butterfly',
+            gate: '真空閘閥 / Gate',
+            door: '腔體閥 / Door Valve',
+            pendulum: '鐘擺閥 / Pendulum',
+            isolation: '真空隔離閥 / Isolation',
+            actuator: '升降機構 / Actuator'
+        };
+        const productGroupSearchLabels = {
+            butterfly: 'Butterfly Throttle Valve 真空蝴蝶閥',
+            gate: 'Vacuum Gate Valve 真空開關閥',
+            door: 'Vacuum Door Valve 真空腔體閥門',
+            pendulum: 'Pendulum Valve 鐘擺閥',
+            isolation: 'Vacuum Isolation Valve 真空管開關閥',
+            actuator: 'Lift Actuator 升降驅動機構'
+        };
+
+        function updateProductCounts() {
+            const groups = ['butterfly', 'gate', 'door', 'pendulum', 'isolation', 'actuator'];
+            const totalCount = partDatabase.length;
+            const allCount = document.getElementById('count_all');
+            if (allCount) allCount.textContent = `${totalCount} 件 / items`;
+
+            groups.forEach(group => {
+                const count = partDatabase.filter(item => item.group === group).length;
+                const countElement = document.getElementById(`count_${group}`);
+                if (countElement) countElement.textContent = `${count} 件 / items`;
+            });
+        }
+
+        function updateImagePreviewFromInput(path) {
+            const imgPreview = document.getElementById('imagePreview');
+            const previewContainer = document.getElementById('imagePreviewContainer');
+            const dimensions = document.getElementById('imageDimensions');
+            if (path && path.trim() !== '') {
+                imgPreview.src = path;
+                previewContainer.classList.remove('hidden');
+            } else {
+                previewContainer.classList.add('hidden');
+                dimensions.textContent = '選取照片後自動讀取尺寸並等比例縮放 / Select an image to detect its dimensions and scale it proportionally.';
+            }
+        }
+
+        function updateImageDimensions(image) {
+            const dimensions = document.getElementById('imageDimensions');
+            if (!image.naturalWidth || !image.naturalHeight) {
+                dimensions.textContent = '無法讀取圖片尺寸 / Unable to read image dimensions.';
+                return;
+            }
+
+            const boxWidth = image.clientWidth || image.width;
+            const boxHeight = image.clientHeight || image.height;
+            const scale = Math.min(boxWidth / image.naturalWidth, boxHeight / image.naturalHeight);
+            let adjustment = '尺寸合適 / Size is suitable';
+            if (scale < 0.99) adjustment = '照片較大，預覽會等比例縮小 / Image is larger than the preview and will be scaled down proportionally';
+            else if (scale > 1.01) adjustment = '照片較小，預覽會等比例放大 / Image is smaller than the preview and will be scaled up proportionally';
+
+            dimensions.textContent = `原始尺寸 ${image.naturalWidth} × ${image.naturalHeight} px；${adjustment}，不會裁切或修改原檔。 / Original size: ${image.naturalWidth} × ${image.naturalHeight} px; ${adjustment.split(' / ')[1]}, without cropping or changing the source file.`;
+        }
+
+        function handleFlexibleImagePick(input) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                const fileName = file.name;
+                const subFolder = document.getElementById('prodSubFolder').value;
+                const relativePath = `img/portfolio/${subFolder}/${fileName}`;
+                
+                document.getElementById('prodImg').value = relativePath;
+                document.getElementById('imagePreviewContainer').classList.remove('hidden');
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imgPreview = document.getElementById('imagePreview');
+                    imgPreview.src = e.target.result;
+                };
+                reader.onerror = function () {
+                    document.getElementById('imageDimensions').textContent = '無法讀取所選照片 / Unable to read the selected image.';
+                    alert('無法讀取所選照片，請確認檔案正常後再試。 / Unable to read the selected image. Check the file and try again.');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function exportDataJs() {
+            const fileContent = `const partDataVersion = "${productCatalogVersion}";\nconst partData = ${JSON.stringify(partDatabase, null, 4)};`;
+            const blob = new Blob([fileContent], { type: "application/javascript" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "data.js";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            alert("data.js 檔案已順利匯出！\n請將新產生的 data.js、index.html，以及 img/ 資料夾裡的新照片一起上傳至伺服器即可完成全網同步。\n\nExport complete. Upload data.js, index.html, and the new images in the img/ folder to publish the updates.");
+        }
+
+        function renderDatabase(items) {
+            const grid = document.getElementById('databaseGrid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            updateProductCounts();
+            const visibleCount = document.getElementById('visibleProductCount');
+            if (visibleCount) visibleCount.textContent = `（顯示 ${items.length} 筆 / Showing ${items.length}）`;
+
+            if (items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400 text-xs">沒有找到符合條件的型號或零件編號 / No matching models or part numbers found.</div>`;
+                return;
+            }
+
+            items.forEach(item => {
+                const nameZh = item.nameZh || item.name;
+                const descZh = item.descZh || '';
+                grid.innerHTML += `
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex flex-col justify-between hover:border-blue-300 transition group">
+                        <div>
+                            <div class="h-36 w-full bg-white rounded-xl overflow-hidden mb-3 relative">
+                                <img src="${item.img || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60'}" alt="${item.name} / ${nameZh}" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60'">
+                                <span class="absolute top-2 left-2 bg-slate-900/80 text-white text-[9px] font-bold px-2 py-0.5 rounded">${productGroupLabels[item.group] || item.group}</span>
+                            </div>
+                            <div class="flex justify-between items-start mb-1">
+                                ${item.pn ? `<span class="bg-blue-100/70 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded-md font-mono">P/N 零件編號：${item.pn}</span>` : ''}
+                            </div>
+                            <h4 class="font-bold text-xs text-slate-900 group-hover:text-blue-600 transition mb-1">${item.name}<span class="block mt-1 font-medium">${nameZh}</span></h4>
+                            ${item.desc ? `<p class="text-[11px] text-slate-500 leading-relaxed mb-1">${item.desc}</p>` : ''}
+                            ${descZh ? `<p class="text-[11px] text-slate-500 leading-relaxed mb-3">${descZh}</p>` : ''}
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="${item.link || '#'}" target="_blank" class="flex-1 bg-white hover:bg-slate-900 hover:text-white text-slate-700 text-center font-bold text-[11px] py-2 rounded-xl transition border border-slate-200 shadow-2xs">
+                                <i class="fa-solid fa-link mr-1"></i> 產品詳情 / Product Details
+                            </a>
+                            <a href="tel:035370025" class="bg-blue-600 hover:bg-blue-700 text-white text-center font-bold text-[11px] px-3 py-2 rounded-xl transition shadow-2xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function filterGroup(group) {
+            currentGroup = group;
+            ['all', 'butterfly', 'gate', 'door', 'pendulum', 'isolation', 'actuator'].forEach(g => {
+                const btn = document.getElementById(`btn_${g}`);
+                if (btn) {
+                    if (g === group) {
+                        btn.className = "w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between bg-blue-50 text-blue-600 font-bold shadow-2xs";
+                    } else {
+                        btn.className = "w-full text-left px-4 py-3 rounded-2xl text-xs transition flex items-center justify-between text-slate-600 hover:bg-slate-50 font-medium";
+                    }
+                }
+            });
+
+            if (group === 'all') {
+                renderDatabase(partDatabase);
+            } else {
+                const filtered = partDatabase.filter(i => i.group === group);
+                renderDatabase(filtered);
+            }
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) searchInput.value = '';
+        }
+
+        function getVisibleProducts() {
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            let baseList = currentGroup === 'all' ? partDatabase : partDatabase.filter(i => i.group === currentGroup);
+            if (query !== '') {
+                baseList = baseList.filter(i => [i.name, i.nameZh, i.pn, i.desc, i.descZh, productGroupSearchLabels[i.group]]
+                    .some(value => String(value || '').toLowerCase().includes(query)));
+            }
+            return baseList;
+        }
+
+        function searchDatabase() {
+            renderDatabase(getVisibleProducts());
+        }
+
+        function renderAdminTable() {
+            const tbody = document.getElementById('adminTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            const adminCount = document.getElementById('adminProductCount');
+            if (adminCount) adminCount.textContent = `${partDatabase.length} 件產品 / products`;
+            partDatabase.forEach((item, index) => {
+                tbody.innerHTML += `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="p-3">
+                            <div class="w-10 h-10 rounded-lg overflow-hidden bg-slate-200">
+                                <img src="${item.img || ''}" class="w-full h-full object-contain bg-white" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60'">
+                            </div>
+                        </td>
+                        <td class="p-3 font-bold text-slate-900">${item.name}<span class="block font-normal">${item.nameZh || item.name}</span></td>
+                        <td class="p-3 font-mono text-blue-600">${item.pn}</td>
+                        <td class="p-3 text-slate-500">${productGroupLabels[item.group] || item.group}</td>
+                        <td class="p-3 text-right space-x-2">
+                            <button onclick="editProduct(${index})" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg transition font-bold"><i class="fa-solid fa-pen"></i></button>
+                            <button onclick="deleteProduct(${index})" class="bg-red-50 hover:bg-red-100 text-red-600 px-3 py-1.5 rounded-lg transition font-bold"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function openProductModal(index = -1) {
+            document.getElementById('editIndex').value = index;
+            document.getElementById('imageFileInput').value = '';
+            
+            const modalTitle = document.getElementById('modalTitle');
+            
+            if (index === -1) {
+                modalTitle.innerText = "新增產品 / Add Product";
+                document.getElementById('prodGroup').value = "butterfly";
+                document.getElementById('prodName').value = "";
+                document.getElementById('prodNameZh').value = "";
+                document.getElementById('prodPn').value = "";
+                document.getElementById('prodDesc').value = "";
+                document.getElementById('prodDescZh').value = "";
+                document.getElementById('prodSubFolder').value = "01-Butterfly";
+                document.getElementById('prodImg').value = "";
+                document.getElementById('prodLink').value = "http://www.prima-biz.com.tw";
+                updateImagePreviewFromInput('');
+            } else {
+                modalTitle.innerText = "編輯產品 / Edit Product";
+                const item = partDatabase[index];
+                document.getElementById('prodGroup').value = item.group;
+                document.getElementById('prodName').value = item.name;
+                document.getElementById('prodNameZh').value = item.nameZh || "";
+                document.getElementById('prodPn').value = item.pn;
+                document.getElementById('prodDesc').value = item.desc;
+                document.getElementById('prodDescZh').value = item.descZh || "";
+                document.getElementById('prodImg').value = item.img || "";
+                document.getElementById('prodLink').value = item.link || "";
+
+                if (item.img) {
+                    const parts = item.img.split('/');
+                    if (parts.length >= 3) {
+                        const folder = parts[2];
+                        const subFolderSelect = document.getElementById('prodSubFolder');
+                        for (let opt of subFolderSelect.options) {
+                            if (opt.value === folder) {
+                                subFolderSelect.value = folder;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                updateImagePreviewFromInput(item.img || '');
+            }
+
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        function handleProductSubmit(e) {
+            e.preventDefault();
+            const index = parseInt(document.getElementById('editIndex').value);
+            const englishDescription = document.getElementById('prodDesc').value.trim();
+            const chineseDescription = document.getElementById('prodDescZh').value.trim();
+
+            if (Boolean(englishDescription) !== Boolean(chineseDescription)) {
+                alert("請同時填寫英文與中文產品描述，或將兩者都留空。 / Enter both English and Chinese descriptions, or leave both blank.");
+                return;
+            }
+            
+            let finalImgPath = document.getElementById('prodImg').value.trim();
+
+            if (!finalImgPath) {
+                finalImgPath = "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&auto=format&fit=crop&q=60";
+            }
+
+            const newItem = {
+                id: index === -1 ? Date.now() : partDatabase[index].id,
+                group: document.getElementById('prodGroup').value,
+                name: document.getElementById('prodName').value,
+                nameZh: document.getElementById('prodNameZh').value,
+                pn: document.getElementById('prodPn').value,
+                desc: document.getElementById('prodDesc').value,
+                descZh: document.getElementById('prodDescZh').value,
+                img: finalImgPath,
+                link: document.getElementById('prodLink').value
+            };
+
+            if (index === -1) {
+                partDatabase.unshift(newItem);
+            } else {
+                partDatabase[index] = newItem;
+            }
+
+            saveToStorage();
+            closeProductModal();
+            renderAdminTable();
+            searchDatabase();
+            alert("產品資料已暫存於本機！\n完成測試後請記得點擊「匯出 data.js 檔案」上傳伺服器。\n\nProduct saved in this browser. After testing, export data.js and upload it to the server to publish the changes.");
+        }
+
+        function editProduct(index) {
+            openProductModal(index);
+        }
+
+        function deleteProduct(index) {
+            if (confirm(`確定要刪除產品「${partDatabase[index].name}」嗎？\nDelete this product?`)) {
+                partDatabase.splice(index, 1);
+                saveToStorage();
+                renderAdminTable();
+                searchDatabase();
+            }
+        }
+
+        // 初始化載入
+        renderServiceItems(fullServiceData);
+        renderDatabase(partDatabase);
+    </script>
+</body>
+</html>
